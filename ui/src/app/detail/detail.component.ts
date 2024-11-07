@@ -85,8 +85,13 @@ export class DetailComponent implements OnInit{
   async addTranslation(lang?: string) {
     if(this.adding()){
       if(!lang){
-        this.newly.set(false);
+        this.adding.set(false);
         throw new Error("Language ID is not defined")
+      }
+      else if(this.ad()!.translations!.map(a => a.language).includes(lang)){
+        this.adding.set(false);
+        this.language.set(lang);
+        throw new Error("Language ID is already defined")
       }
       else{
         this.language.set(lang)

@@ -1,4 +1,5 @@
 #detail-container{
+  padding-block: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
