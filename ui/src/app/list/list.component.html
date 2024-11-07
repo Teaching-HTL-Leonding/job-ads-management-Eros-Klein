@@ -1,0 +1,12 @@
+<div id="ad-container">
+
+@for (ad of ads(); track ad.id){
+  <div class="ad" [routerLink]="['/detail/' + ad.id]">
+    <span class="delete-button" (click)="delete(ad); $event.stopPropagation()">Delete</span>
+    <p class="ad-id">{{ad.id}}</p>
+    <p class="ad-title">{{ad.title}}</p>
+    <p class="ad-text">{{ad.textEN}}</p>
+  </div>
+}
+
+</div>

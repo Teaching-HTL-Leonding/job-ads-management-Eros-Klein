@@ -1,0 +1,112 @@
+#detail-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#detail-info-container{
+  display: grid;
+
+  grid-template-columns: 1fr 9fr;
+  grid-template-areas:
+    "num title"
+    "text text";
+
+  width: 50%;
+  padding-block: 2rem;
+  padding-inline: 5rem;
+}
+
+#detail-info-container > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header{
+  grid-area: head;
+}
+
+#id{
+  grid-area: num;
+}
+
+#title{
+  grid-area: title;
+}
+
+.text{
+  grid-area: text;
+}
+
+#language-selector{
+  padding: 1rem;
+  border-radius: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: darkmagenta;
+
+  color: white;
+}
+
+input{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+textarea{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 20vh;
+  font-size: 1.1rem;
+}
+
+input:focus{
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+.button-container > button {
+  padding: 1rem;
+  border-radius: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: darkmagenta;
+
+  transition: all ease-in-out 0.3s;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 5px 1px blueviolet;
+}
+
+.button-container > button:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 5px blueviolet;
+}
+
+#delete-button{
+  background-color: red;
+  color: lightpink;
+  border-radius: 2.5rem;
+
+  cursor: pointer;
+  font-weight: bold;
+
+  box-shadow: 0 5px 1rem 0 rgba(255, 0, 0, 0.29);
+}

@@ -1,0 +1,53 @@
+#ad-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ad:hover{
+  transform: scale(1.01);
+}
+
+.ad{
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-areas:
+    "id head"
+    "body body";
+  background-color: rgba(255, 255, 255, 0.82);
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 1rem;
+}
+
+.ad-id{
+  font-weight: 1000;
+  grid-area: id;
+}
+
+.ad-text{
+  font-size: 1.1rem;
+  grid-area: body;
+}
+
+.ad-title{
+  text-decoration: darkmagenta underline;
+  grid-area: head;
+}
+
+.delete-button{
+  background-color: red;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  color: lightpink;
+  border-radius: 2.5rem;
+
+  cursor: pointer;
+  font-weight: bold;
+
+  box-shadow: 0 5px 1rem 0 rgba(255, 0, 0, 0.29);
+}
