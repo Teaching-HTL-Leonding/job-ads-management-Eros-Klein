@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body{
+  font-family: "Lucida Console", sans-serif;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+
+  background-color: rgba(147, 112, 219, 0.26);
+}

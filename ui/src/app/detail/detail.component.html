@@ -1,0 +1,36 @@
+<div id="detail-container">
+
+  <div id="header">
+    <h1>Ad titled "{{ad()?.title}}" in {{language()}}</h1>
+  </div>
+
+<div id="detail-info-container">
+  <div id="title">
+    <input spellcheck="false" (keydown.enter)="$event.preventDefault(); updateTitle()" [(ngModel)]="title">
+  </div>
+  <div id="id">
+    <h2>{{ad()?.id}}</h2>
+  </div>
+    <div class="text">
+      <textarea placeholder="Enter the Job description in your chosen language! (ctrl+shift+enter to generate from english)" (keydown.control.shift.enter)="$event.preventDefault(); generateTranslation()" (keydown.enter)="$event.preventDefault(); updateText()" [disabled]="language() !== 'EN' && !newly()" spellcheck="false" [(ngModel)]="displayText"></textarea>
+    </div>
+</div>
+
+  <div class="button-container">
+    <select [(ngModel)]="language" id="language-selector">
+      <option [value]="'EN'">EN</option>
+      @for (translation of ad()?.translations; track $index){
+        <option [value]="translation.language">{{translation.language}}</option>
+      }
+    </select>
+    <button (click)="addTranslation()">Add Translation</button>
+    <button id="delete-button" (click)="deleteSelectedLanguage()">Delete Selected Translation</button>
+  </div>
+
+  @if (adding()){
+    <div style="display: flex; justify-content: center; align-items: center">
+      <input #langInput (keydown.enter)="addTranslation(langInput.value)"  spellcheck="false" STYLE="text-align: center" placeholder="Your Language ID">
+    </div>
+  }
+
+</div>

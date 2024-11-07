@@ -1,0 +1,19 @@
+#list-container{
+  height: 60vh;
+  width: 80%;
+  overflow: auto;
+  border-radius: 2.5rem;
+
+  background-color: rgba(0, 0, 0, 0.27);
+  padding: 2rem;
+  scrollbar-width: none;
+  box-shadow: 0 5px 1rem 0 purple;
+}
+
+#home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}

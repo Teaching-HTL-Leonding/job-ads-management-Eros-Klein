@@ -1,0 +1,18 @@
+nav{
+  background-color: mediumpurple;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  padding-block: 1rem;
+  box-shadow: 0 0.5rem 1rem purple;
+}
+
+nav > div {
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  transform: scale(1.1);
+}
